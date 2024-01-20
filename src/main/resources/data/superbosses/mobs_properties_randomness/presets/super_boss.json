@@ -1,0 +1,199 @@
+{
+    "experience_multiplier": 8,
+    "custom_name": {
+        "chance": 1.0,
+        "overrides": [
+        ],
+        "prefixes": [
+            "§e⭐§aSuper§e⭐§r "
+        ],
+        "suffixes": [
+        ]
+    },
+    "attributes": [
+        {
+            "id": "minecraft:generic.max_health",
+            "modifier_name": "Better",
+            "amount": {
+                "min": 1.00,
+                "max": 1.5
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.max_health",
+            "modifier_name": "Better",
+            "amount": {
+                "min": 3.00,
+                "max": 5.00
+            },
+            "operation": "addition"
+        },
+        {
+            "id": "minecraft:generic.attack_damage",
+            "modifier_name": "Stronger",
+            "amount": {
+                "min": 0.50,
+                "max": 0.70
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.knockback_resistance",
+            "modifier_name": "Harder",
+            "amount": {
+                "min": 0.15,
+                "max": 0.30
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.movement_speed",
+            "modifier_name": "Faster",
+            "amount": {
+                "min": 0.05,
+                "max": 0.1
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.follow_range",
+            "modifier_name": "Follow Farther",
+            "amount": {
+                "min": 0.5,
+                "max": 0.5
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.armor",
+            "modifier_name": "Base Armor",
+            "amount": {
+                "min": 3,
+                "max": 6
+            },
+            "operation": "addition"
+        },
+        {
+            "id": "minecraft:generic.armor_toughness",
+            "modifier_name": "Base Armor Toughness",
+            "amount": {
+                "min": 0,
+                "max": 3
+            },
+            "operation": "addition"
+        },
+        {
+            "id": "minecraft:generic.attack_knockback",
+            "modifier_name": "Knockbacker",
+            "amount": {
+                "min": 0.05,
+                "max": 0.25
+            },
+            "operation": "multiply_base"
+        }
+    ],
+    "equipment": {
+        "head": {
+            "chance": 0.2,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:iron_helmet",
+                    "weight": 1
+                },
+                {
+                    "id": "minecraft:leather_helmet",
+                    "weight": 1
+                },
+                {
+                    "id": "minecraft:gold_helmet",
+                    "weight": 1
+                }
+            ]
+        },
+        "chest": {
+            "chance": 0.4,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:iron_chestplate",
+                    "weight": 1
+                },
+                {
+                    "id": "minecraft:leather_chestplate",
+                    "weight": 1
+                },
+                {
+                    "id": "minecraft:gold_chestplate",
+                    "weight": 1
+                }
+            ]
+        },
+        "legs": {
+            "chance": 0.5,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:iron_leggings",
+                    "weight": 1
+                },
+                {
+                    "id": "minecraft:leather_leggings",
+                    "weight": 1
+                },
+                {
+                    "id": "minecraft:gold_leggings",
+                    "weight": 1
+                }
+            ]
+        },
+        "feet": {
+            "chance": 0.5,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:iron_boots",
+                    "weight": 1
+                },
+                {
+                    "id": "minecraft:leather_boots",
+                    "weight": 1
+                },
+                {
+                    "id": "minecraft:gold_boots",
+                    "weight": 1
+                }
+            ]
+        },
+        "offhand": {
+            "chance": 0.4,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:shield",
+                    "weight": 1
+                }
+            ]
+        }
+    },
+    "creeper": {
+        "fuse": {
+            "min": 50,
+            "max": 50
+        },
+        "explosion_radius": {
+            "min": 5,
+            "max": 5
+        },
+        "powered_chance": 0.05
+    },
+    "set_nbt": [
+        {
+            "nbt_tag": "SuperBoss",
+            "type": "boolean",
+            "value": 1,
+            "persistent_data": true
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "entity_tag": "superbosses:monsters",
+    "priority": 50,
+    "presets": {
+        "chance": 0.0005,
+        "list": [
+            {
+                "id": "superbosses:ultra_mega_boss",
+                "weight": 100
+            }
+        ]
+    }
+}

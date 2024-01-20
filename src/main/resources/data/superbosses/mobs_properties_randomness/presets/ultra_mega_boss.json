@@ -1,0 +1,173 @@
+{
+    "experience_multiplier": 200,
+    "custom_name": {
+        "chance": 1.0,
+        "overrides": [
+        ],
+        "prefixes": [
+            "§e⭐⭐⭐⭐§6§lULTRA MEGA§e⭐⭐⭐⭐§r "
+        ],
+        "suffixes": [
+        ]
+    },
+    "attributes": [
+        {
+            "id": "minecraft:generic.max_health",
+            "modifier_name": "Better",
+            "amount": {
+                "min": 10.00,
+                "max": 13.00
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.max_health",
+            "modifier_name": "Better",
+            "amount": {
+                "min": 50.00,
+                "max": 60.00
+            },
+            "operation": "addition"
+        },
+        {
+            "id": "minecraft:generic.attack_damage",
+            "modifier_name": "Stronger",
+            "amount": {
+                "min": 9.00,
+                "max": 11.00
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.knockback_resistance",
+            "modifier_name": "Harder",
+            "amount": {
+                "min": 6.00,
+                "max": 8.00
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.movement_speed",
+            "modifier_name": "Faster",
+            "amount": {
+                "min": 0.2,
+                "max": 0.3
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.follow_range",
+            "modifier_name": "Follow Farther",
+            "amount": {
+                "min": 2,
+                "max": 2
+            },
+            "operation": "multiply_base"
+        },
+        {
+            "id": "minecraft:generic.armor",
+            "modifier_name": "Base Armor",
+            "amount": {
+                "min": 20,
+                "max": 32
+            },
+            "operation": "addition"
+        },
+        {
+            "id": "minecraft:generic.armor_toughness",
+            "modifier_name": "Base Armor Toughness",
+            "amount": {
+                "min": 12,
+                "max": 20
+            },
+            "operation": "addition"
+        },
+        {
+            "id": "minecraft:generic.attack_knockback",
+            "modifier_name": "Knockbacker",
+            "amount": {
+                "min": 2.0,
+                "max": 3.0
+            },
+            "operation": "multiply_base"
+        }
+    ],
+    "equipment": {
+        "head": {
+            "chance": 0.2,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:netherite_helmet",
+                    "weight": 1
+                }
+            ]
+        },
+        "chest": {
+            "chance": 0.4,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:netherite_chestplate",
+                    "weight": 1
+                }
+            ]
+        },
+        "legs": {
+            "chance": 0.50,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:netherite_leggings",
+                    "weight": 1
+                }
+            ]
+        },
+        "feet": {
+            "chance": 0.50,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:netherite_boots",
+                    "weight": 1
+                }
+            ]
+        },
+        "offhand": {
+            "chance": 0.50,
+            "override": false,
+            "items": [
+                {
+                    "id": "minecraft:shield",
+                    "weight": 1
+                }
+            ]
+        }
+    },
+        "scale_pehkui": [
+        {
+        "scale": 1.7,
+        "scale_types": ["pehkui:base"]
+        }
+    ],
+    "creeper": {
+        "fuse": {
+            "min": 80,
+            "max": 80
+        },
+        "explosion_radius": {
+            "min": 40,
+            "max": 40
+        },
+        "powered_chance": 1.00
+    },
+    "set_nbt": [
+        {
+            "nbt_tag": "UltraMegaBoss",
+            "type": "boolean",
+            "value": 1,
+            "persistent_data": true
+        }
+    ]
+}

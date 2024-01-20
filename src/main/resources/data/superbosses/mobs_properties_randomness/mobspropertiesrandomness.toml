@@ -1,0 +1,4 @@
+#If true mob attacks with Tinker tools will use the Tinker attack method. Might have side effects
+"TiCon Attack" = false
+#If true, all the loaded JSONs will be logged in the mobspropertiesrandomness.log file.
+Debug = true
