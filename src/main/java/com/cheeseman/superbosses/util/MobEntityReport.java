@@ -19,22 +19,22 @@ public class MobEntityReport {
 
     public static void initReports () {
         LOGGER.info("THINGY RAN");
-        File fda = new File(getGameDirectory(),"/kubejs");
+        File fda = new File("kubejs");
         if (!fda.exists())
             fda.mkdir();
-        File fdb = new File(getGameDirectory(),"/kubejs/data");
+        File fdb = new File("kubejs/data");
         if (!fdb.exists())
             fdb.mkdir();
-        File fdc = new File(getGameDirectory(),"/kubejs/data/superbosses");
+        File fdc = new File("kubejs/data/superbosses");
         if (!fdc.exists())
             fdc.mkdir();
-        File fdd = new File(getGameDirectory(),"/kubejs/data/superbosses/tags");
+        File fdd = new File("kubejs/data/superbosses/tags");
         if (!fdd.exists())
             fdd.mkdir();
-        File fde = new File(getGameDirectory(),"/kubejs/data/superbosses/tags/entity_types");
+        File fde = new File("kubejs/data/superbosses/tags/entity_types");
         if (!fde.exists())
             fde.mkdir();
-        File fb = new File(getGameDirectory(),"/kubejs/data/superbosses/tags/entity_types/monsters.json");
+        File fb = new File("kubejs/data/superbosses/tags/entity_types/monsters.json");
         if (fb.exists())
             fb.delete();
     }
@@ -45,7 +45,7 @@ public class MobEntityReport {
         boolean isFirst = true;
         PrintStream p = null;
         try {
-            p = new PrintStream(new FileOutputStream(getGameDirectory().getPath() + "/kubejs/data/superbosses/tags/entity_types/monsters.json", true));
+            p = new PrintStream(new FileOutputStream("kubejs/data/superbosses/tags/entity_types/monsters.json", true));
         } catch (IOException e) {
             e.printStackTrace();
         }

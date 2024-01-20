@@ -19,16 +19,16 @@ public class LootJSReport {
 
     public static void initReports () {
         LOGGER.info("THINGY 2 RAN");
-        File fda = new File(getGameDirectory(),"/kubejs");
+        File fda = new File("kubejs");
         if (!fda.exists())
             fda.mkdir();
-        File fdb = new File(getGameDirectory(),"/kubejs/server_scripts");
+        File fdb = new File("kubejs/server_scripts");
         if (!fdb.exists())
             fdb.mkdir();
-        File fdc = new File(getGameDirectory(),"/kubejs/server_scripts/superbosses");
+        File fdc = new File("kubejs/server_scripts/superbosses");
         if (!fdc.exists())
             fdc.mkdir();
-        File fb = new File(getGameDirectory(),"/kubejs/server_scripts/superbosses/superbosses_loot.js");
+        File fb = new File("kubejs/server_scripts/superbosses/superbosses_loot.js");
         if (fb.exists())
             fb.delete();
     }
@@ -39,7 +39,7 @@ public class LootJSReport {
         boolean isFirst = true;
         PrintStream p = null;
         try {
-            p = new PrintStream(new FileOutputStream(getGameDirectory().getPath() + "/kubejs/server_scripts/superbosses/superbosses_loot.js", true));
+            p = new PrintStream(new FileOutputStream("kubejs/server_scripts/superbosses/superbosses_loot.js", true));
         } catch (IOException e) {
             e.printStackTrace();
         }
