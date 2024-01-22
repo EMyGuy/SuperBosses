@@ -113,7 +113,7 @@
             ]
         },
         "chest": {
-            "chance": 0.4,
+            "chance": 0.35,
             "override": false,
             "items": [
                 {
@@ -131,7 +131,7 @@
             ]
         },
         "legs": {
-            "chance": 0.5,
+            "chance": 0.4,
             "override": false,
             "items": [
                 {
@@ -149,7 +149,7 @@
             ]
         },
         "feet": {
-            "chance": 0.5,
+            "chance": 0.4,
             "override": false,
             "items": [
                 {
