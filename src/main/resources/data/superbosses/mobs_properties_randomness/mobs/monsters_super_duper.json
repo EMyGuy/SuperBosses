@@ -1,5 +1,5 @@
 {
-    "entity_tag": "superbosses:monsters",
+    "target": "#superbosses:monsters",
     "priority": 53,
     "presets": {
         "chance": 0.01,

@@ -7,6 +7,8 @@ import java.io.PrintStream;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.core.Registry;
@@ -58,9 +60,9 @@ public class MobEntityReport {
                 "    \"replace\": false,\n" +
                 "    \"values\": [\n");
 
-        for (EntityType<?> a : Registry.ENTITY_TYPE) {
+        for (EntityType<?> a : BuiltInRegistries.ENTITY_TYPE) {
             if (isValidClassification(a)) {
-                p.println(firstCheck(isFirst) + '\"' + a.getRegistryName().toString() + '\"');
+                p.println(firstCheck(isFirst) + '\"' + EntityType.getKey(a).toString() + '\"');
                 isFirst = false;
             }
         }

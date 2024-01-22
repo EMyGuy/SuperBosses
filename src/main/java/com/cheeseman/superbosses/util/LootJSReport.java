@@ -50,52 +50,52 @@ public class LootJSReport {
 
         p.print("priority: 0\n" +
                 "\n" +
-                "onEvent(\"lootjs\", (event) => {\n" +
+                "LootJS.modifiers((event) => {\n" +
                 "    event\n" +
                 "        .addLootTypeModifier([LootType.ENTITY])\n" +
                 "        .entityPredicate(entity => {\n" +
-                "        return entity.asKJS().fullNBT.ForgeData.SuperBoss == 1\n" +
+                "        return entity.nbt.ForgeData.SuperBoss == 1\n" +
                 "        })\n" +
-                "        .modifyLoot(Ingredient.getAll(), (itemStack) => {\n" +
+                "        .modifyLoot(Ingredient.all, (itemStack) => {\n" +
                 "            itemStack.setCount(itemStack.getCount() * 4);\n" +
                 "            return itemStack;\n" +
                 "        })\n" +
                 "\n" +
                 "});\n" +
                 "\n" +
-                "onEvent(\"lootjs\", (event) => {\n" +
+                "LootJS.modifiers((event) => {\n" +
                 "    event\n" +
                 "        .addLootTypeModifier([LootType.ENTITY])\n" +
                 "        .entityPredicate(entity => {\n" +
-                "        return entity.asKJS().fullNBT.ForgeData.SuperDuperBoss == 1\n" +
+                "        return entity.nbt.ForgeData.SuperDuperBoss == 1\n" +
                 "        })\n" +
-                "        .modifyLoot(Ingredient.getAll(), (itemStack) => {\n" +
+                "        .modifyLoot(Ingredient.all, (itemStack) => {\n" +
                 "            itemStack.setCount(itemStack.getCount() * 8);\n" +
                 "            return itemStack;\n" +
                 "        });\n" +
                 "\n" +
                 "});\n" +
                 "\n" +
-                "onEvent(\"lootjs\", (event) => {\n" +
+                "LootJS.modifiers((event) => {\n" +
                 "    event\n" +
                 "        .addLootTypeModifier([LootType.ENTITY])\n" +
                 "        .entityPredicate(entity => {\n" +
-                "        return entity.asKJS().fullNBT.ForgeData.MegaBoss == 1\n" +
+                "        return entity.nbt.ForgeData.MegaBoss == 1\n" +
                 "        })\n" +
-                "        .modifyLoot(Ingredient.getAll(), (itemStack) => {\n" +
+                "        .modifyLoot(Ingredient.all, (itemStack) => {\n" +
                 "            itemStack.setCount(itemStack.getCount() * 22);\n" +
                 "            return itemStack;\n" +
                 "        });\n" +
                 "\n" +
                 "});\n" +
                 "\n" +
-                "onEvent(\"lootjs\", (event) => {\n" +
+                "LootJS.modifiers((event) => {\n" +
                 "    event\n" +
                 "        .addLootTypeModifier([LootType.ENTITY])\n" +
                 "        .entityPredicate(entity => {\n" +
-                "        return entity.asKJS().fullNBT.ForgeData.UltraMegaBoss == 1\n" +
+                "        return entity.nbt.ForgeData.UltraMegaBoss == 1\n" +
                 "        })\n" +
-                "        .modifyLoot(Ingredient.getAll(), (itemStack) => {\n" +
+                "        .modifyLoot(Ingredient.all, (itemStack) => {\n" +
                 "            itemStack.setCount(itemStack.getCount() * 55);\n" +
                 "            return itemStack;\n" +
                 "        });\n" +

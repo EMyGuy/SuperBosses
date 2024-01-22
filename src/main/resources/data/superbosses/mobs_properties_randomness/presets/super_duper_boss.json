@@ -164,7 +164,8 @@
         "scale_pehkui": [
         {
         "scale": 1.15,
-        "scale_types": ["pehkui:base"]
+        "scale_types": ["pehkui:base"],
+        "operation": "set"
         }
     ],
     "creeper": {
