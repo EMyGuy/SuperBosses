@@ -1,5 +1,6 @@
 package com.cheeseman.superbosses.util;
 
+import com.cheeseman.superbosses.config.SuperBossesCommonConfig;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Registry;
@@ -57,7 +58,7 @@ public class LootJSReport {
                 "        return entity.asKJS().fullNBT.ForgeData.SuperBoss == 1\n" +
                 "        })\n" +
                 "        .modifyLoot(Ingredient.getAll(), (itemStack) => {\n" +
-                "            itemStack.setCount(itemStack.getCount() * 4);\n" +
+                "            itemStack.setCount(itemStack.getCount() * " + SuperBossesCommonConfig.SUPER_BOSS_LOOT_MULTIPLIER.get() + ");\n" +
                 "            return itemStack;\n" +
                 "        })\n" +
                 "\n" +
@@ -70,7 +71,7 @@ public class LootJSReport {
                 "        return entity.asKJS().fullNBT.ForgeData.SuperDuperBoss == 1\n" +
                 "        })\n" +
                 "        .modifyLoot(Ingredient.getAll(), (itemStack) => {\n" +
-                "            itemStack.setCount(itemStack.getCount() * 8);\n" +
+                "            itemStack.setCount(itemStack.getCount() * " + SuperBossesCommonConfig.SUPER_DUPER_BOSS_LOOT_MULTIPLIER.get() + ");\n" +
                 "            return itemStack;\n" +
                 "        });\n" +
                 "\n" +
@@ -83,7 +84,7 @@ public class LootJSReport {
                 "        return entity.asKJS().fullNBT.ForgeData.MegaBoss == 1\n" +
                 "        })\n" +
                 "        .modifyLoot(Ingredient.getAll(), (itemStack) => {\n" +
-                "            itemStack.setCount(itemStack.getCount() * 22);\n" +
+                "            itemStack.setCount(itemStack.getCount() * " + SuperBossesCommonConfig.MEGA_BOSS_LOOT_MULTIPLIER.get() + ");\n" +
                 "            return itemStack;\n" +
                 "        });\n" +
                 "\n" +
@@ -96,7 +97,7 @@ public class LootJSReport {
                 "        return entity.asKJS().fullNBT.ForgeData.UltraMegaBoss == 1\n" +
                 "        })\n" +
                 "        .modifyLoot(Ingredient.getAll(), (itemStack) => {\n" +
-                "            itemStack.setCount(itemStack.getCount() * 55);\n" +
+                "            itemStack.setCount(itemStack.getCount() * " + SuperBossesCommonConfig.ULTRA_MEGA_BOSS_LOOT_MULTIPLIER.get() + ");\n" +
                 "            return itemStack;\n" +
                 "        });\n" +
                 "\n" +

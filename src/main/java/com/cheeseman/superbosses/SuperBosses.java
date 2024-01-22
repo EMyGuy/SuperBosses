@@ -1,5 +1,6 @@
 package com.cheeseman.superbosses;
 
+import com.cheeseman.superbosses.config.SuperBossesCommonConfig;
 import com.cheeseman.superbosses.util.LootJSReport;
 import com.cheeseman.superbosses.util.MobEntityReport;
 import com.mojang.logging.LogUtils;
@@ -11,7 +12,9 @@ import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
@@ -33,6 +36,8 @@ public class SuperBosses {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().register(this);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, SuperBossesCommonConfig.SPEC, "superbosses-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

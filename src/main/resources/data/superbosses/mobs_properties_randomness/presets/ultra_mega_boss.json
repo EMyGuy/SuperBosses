@@ -70,7 +70,7 @@
             "modifier_name": "Base Armor",
             "amount": {
                 "min": 20,
-                "max": 32
+                "max": 30
             },
             "operation": "addition"
         },
@@ -79,7 +79,7 @@
             "modifier_name": "Base Armor Toughness",
             "amount": {
                 "min": 12,
-                "max": 20
+                "max": 18
             },
             "operation": "addition"
         },
@@ -105,7 +105,7 @@
             ]
         },
         "chest": {
-            "chance": 0.4,
+            "chance": 0.35,
             "override": false,
             "items": [
                 {
@@ -115,7 +115,7 @@
             ]
         },
         "legs": {
-            "chance": 0.50,
+            "chance": 0.4,
             "override": false,
             "items": [
                 {
@@ -125,7 +125,7 @@
             ]
         },
         "feet": {
-            "chance": 0.50,
+            "chance": 0.4,
             "override": false,
             "items": [
                 {
@@ -135,7 +135,7 @@
             ]
         },
         "offhand": {
-            "chance": 0.50,
+            "chance": 0.4,
             "override": false,
             "items": [
                 {
