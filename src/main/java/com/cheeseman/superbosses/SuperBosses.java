@@ -1,5 +1,6 @@
 package com.cheeseman.superbosses;
 
+import com.cheeseman.superbosses.config.SuperBossesCommonConfig;
 import com.cheeseman.superbosses.util.LootJSReport;
 import com.cheeseman.superbosses.util.MobEntityReport;
 import com.mojang.logging.LogUtils;
@@ -34,6 +35,8 @@ public class SuperBosses
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, SuperBossesCommonConfig.SPEC, "superbosses-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
