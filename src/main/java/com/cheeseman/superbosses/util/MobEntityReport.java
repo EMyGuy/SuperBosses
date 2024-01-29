@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.List;
 
+import com.cheeseman.superbosses.config.SuperBossesCommonConfig;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.MobCategory;
@@ -59,11 +61,18 @@ public class MobEntityReport {
                 "    \"values\": [\n");
 
         for (EntityType<?> a : Registry.ENTITY_TYPE) {
-            if (isValidClassification(a)) {
-                p.println(firstCheck(isFirst) + '\"' + a.getRegistryName().toString() + '\"');
+            String entityString = EntityType.getKey(a).toString();
+            if (isValidClassification(a) && isMobNotBlacklisted(entityString)) {
+                p.println(firstCheck(isFirst) + '\"' + entityString + '\"');
                 isFirst = false;
             }
         }
+
+        for (String mobString : getMobWhitelist()) {
+            p.println(firstCheck(isFirst) + '\"' + mobString + '\"');
+            isFirst = false;
+        }
+
 
         p.print("    ]\n" +
                 "  }\n");
@@ -95,6 +104,19 @@ public class MobEntityReport {
         else {
             return "";
         }
+    }
+
+    public static List<? extends String> getMobWhitelist() {
+        return SuperBossesCommonConfig.WHITELIST.get();
+    }
+    public static List<? extends String> getMobBlacklist() {
+        return SuperBossesCommonConfig.BLACKLIST.get();
+    }
+    public static boolean isMobNotBlacklisted(String entityString) {
+        if (getMobBlacklist().contains(entityString)) {
+            return false;
+        }
+        return true;
     }
 
 }

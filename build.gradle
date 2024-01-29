@@ -19,7 +19,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 
-version = '1.1.0-1.18.2'
+version = '1.2.0-1.18.2'
 group = 'com.cheeseman.superbosses' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'superbosses'
 
@@ -175,7 +175,7 @@ jar {
         attributes([
                 "Specification-Title"     : "superbosses",
                 "Specification-Vendor"    : "superbossessareus",
-                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Specification-Version"   : "1.2.0", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "superbossessareus",
