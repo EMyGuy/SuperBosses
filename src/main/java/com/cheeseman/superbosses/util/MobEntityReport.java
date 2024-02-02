@@ -9,8 +9,6 @@ import java.util.List;
 import com.cheeseman.superbosses.config.SuperBossesCommonConfig;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.core.Registry;
@@ -62,7 +60,7 @@ public class MobEntityReport {
                 "    \"replace\": false,\n" +
                 "    \"values\": [\n");
 
-        for (EntityType<?> a : BuiltInRegistries.ENTITY_TYPE) {
+        for (EntityType<?> a : Registry.ENTITY_TYPE) {
             String entityString = EntityType.getKey(a).toString();
             if (isValidClassification(a) && isMobNotBlacklisted(entityString)) {
                 p.println(firstCheck(isFirst) + '\"' + entityString + '\"');
@@ -74,6 +72,7 @@ public class MobEntityReport {
             p.println(firstCheck(isFirst) + '\"' + mobString + '\"');
             isFirst = false;
         }
+
 
         p.print("    ]\n" +
                 "  }\n");

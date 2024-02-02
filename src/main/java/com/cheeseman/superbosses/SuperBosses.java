@@ -4,12 +4,10 @@ import com.cheeseman.superbosses.config.SuperBossesCommonConfig;
 import com.cheeseman.superbosses.util.LootJSReport;
 import com.cheeseman.superbosses.util.MobEntityReport;
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.entity.Mob;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -18,6 +16,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -28,7 +27,6 @@ public class SuperBosses
     public static final String MOD_ID = "superbosses";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-
     public SuperBosses()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -38,11 +36,9 @@ public class SuperBosses
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, SuperBossesCommonConfig.SPEC, "superbosses-common.toml");
 
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -51,19 +47,6 @@ public class SuperBosses
         MobEntityReport.doReport();
         LootJSReport.initReports();
         LootJSReport.doReport();
-    }
-
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-
-    }
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
-
     }
 
     @SubscribeEvent
@@ -81,7 +64,6 @@ public class SuperBosses
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
         }
     }
 }

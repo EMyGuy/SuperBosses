@@ -32,7 +32,7 @@ public class SuperBossesCommonConfig {
                 .define("ULTRA MEGA Loot Multiplier", 55);
 
         WHITELIST = BUILDER.comment("\nWhitelist of mobs that will be able to spawn as Super Bosses. (example: \"minecraft:pig\") \nBy default any mob classified as a Monster will be included. If you add any invalid entities Super Bosses will no longer spawn!")
-                        .defineList("Mob Whitelist", ImmutableList.of(), o -> o instanceof String);
+                .defineList("Mob Whitelist", ImmutableList.of(), o -> o instanceof String);
         BLACKLIST = BUILDER.comment("Blacklist of mobs that will not spawn as Super Bosses (example: \"minecraft:wither\")")
                 .defineList("Mob Blacklist", ImmutableList.of(), o -> o instanceof String);
 
